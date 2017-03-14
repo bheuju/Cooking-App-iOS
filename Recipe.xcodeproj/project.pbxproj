@@ -24,6 +24,7 @@
 		DABBBE7B1E6924B300D2A78B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE791E6924B300D2A78B /* Main.storyboard */; };
 		DABBBE801E6924B300D2A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE7E1E6924B300D2A78B /* LaunchScreen.storyboard */; };
 		DABBBE881E69285800D2A78B /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE871E69285800D2A78B /* assets.xcassets */; };
+		DAC6C5751E77AD0000BDC7CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6C5741E77AD0000BDC7CD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DABBBE7F1E6924B300D2A78B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DABBBE811E6924B300D2A78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DABBBE871E69285800D2A78B /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		DAC6C5741E77AD0000BDC7CD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		DA6FC40F1E6EA85900F8FF74 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				DAC6C5741E77AD0000BDC7CD /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				DA7A33A21E710B66007C934D /* Validator.swift in Sources */,
 				DA6FC4231E6EA85900F8FF74 /* RecipeData.swift in Sources */,
 				DA6FC4271E6EA85900F8FF74 /* RegisterViewController.swift in Sources */,
+				DAC6C5751E77AD0000BDC7CD /* Constants.swift in Sources */,
 				DA5E05D51E726B1700A2F7B7 /* User.swift in Sources */,
 				DA6FC4251E6EA85900F8FF74 /* ExploreViewController.swift in Sources */,
 				DA6FC4261E6EA85900F8FF74 /* RecipeDetailsViewController.swift in Sources */,

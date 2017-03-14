@@ -11,6 +11,7 @@ import UIKit
 class ExploreViewController: UIViewController {
     
     @IBOutlet weak var recipeList: UICollectionView!
+    @IBOutlet weak var signInBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,22 @@ class ExploreViewController: UIViewController {
         recipeList.delegate = self
         recipeList.dataSource = self
         
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onSignIn), name: Notification.Name(SIGN_IN_NOTIFICATION_KEY), object: nil)
+        
+    }
+    
+    
+    func onSignIn() {
+    
+        print("Login Successful")
+        //Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Success", alertMessage: "Sign in successful")
+        
+        
+        //Hide signin button
+        signInBtn.isEnabled = false
+        signInBtn.tintColor = UIColor.clear
+
     }
 }
 

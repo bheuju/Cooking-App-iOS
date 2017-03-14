@@ -13,20 +13,18 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    let defaultUsername = "bishal"
-    let defaultPassword = "heuju"
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     func checkLogin() {
-        if (username.text == defaultUsername && password.text == defaultPassword){
-            print("Login Successful")
-        } else {
-            print("Invalid Login")
+        if UserData.shared.getUser(user: User(username: username.text!, password: password.text!)) {
+            //Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Success", alertMessage: "Login Successful")
+            
+            // SignInSuccess Notification broadcast
+            NotificationCenter.default.post(name: Notification.Name(SIGN_IN_NOTIFICATION_KEY), object: self)
+            
         }
     }
     
@@ -38,8 +36,12 @@ class SignInViewController: UIViewController {
 extension SignInViewController {
     
     @IBAction func onSignIn(_ sender: UIButton) {
+        
         checkLogin()
-        self.dismiss(animated: true, completion: nil)
+        //TODO: After checkLogin() dissmiss signInVC nav ctrl
+        
+        self.dismiss(animated: true, completion: nil)       // TODO: This dismisses alertbox of successful login
+        
     }
     
     @IBAction func onRegister(_ sender: UIButton) {
@@ -49,8 +51,11 @@ extension SignInViewController {
     }
     
     @IBAction func onForgotPassword(_ sender: UIButton) {
+        
+        //TODO: Alert on forgot password completion handler
+        
         //Forgot password alertbox implementation here
-        Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Success", alertMessage: "A password reset link as been sent to your email")
+        Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Success", alertMessage: "A password reset link has been sent to your email")
     }
     
     @IBAction func onSkip(_ sender: UIButton) {

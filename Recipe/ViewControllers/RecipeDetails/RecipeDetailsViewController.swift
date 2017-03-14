@@ -20,12 +20,23 @@ class RecipeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if UserData.shared.getUser() != nil {
+            //TODO: Add edit bar button
+            
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(RecipeDetailsViewController.onEditRecipe))
+            
+        }
         guard let _ = recipe else {
             let _ = self.navigationController?.popViewController(animated: true)
             return
         }
+        
         setRecipe(myRecipe: recipe!)
+    }
+    
+    
+    func onEditRecipe() {
+        Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Edit", alertMessage: "Do you want to edit te recipe?")
     }
     
     
@@ -43,6 +54,7 @@ class RecipeDetailsViewController: UIViewController {
         }
         
         recipeReview.text = myRecipe.recipeReview!
+
     }
     
     @IBAction func favouriteButtonClicked(_ sender: UIButton) {

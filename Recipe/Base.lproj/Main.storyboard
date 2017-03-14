@@ -175,6 +175,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="recipeList" destination="OS6-vl-2l6" id="PAQ-lU-u44"/>
+                        <outlet property="signInBtn" destination="Tc1-VA-inq" id="iyI-ki-a9Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3j-VS-wpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
