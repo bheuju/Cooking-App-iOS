@@ -25,9 +25,9 @@ class RecipeData {
         
         recipeList.append(Recipe(recipeTitle: "Pizza", recipeImage: "pizza.jpg", recipeFavourited: false, recipeReview: "Pizzas are round"))
         
-        recipeList.append(Recipe(recipeTitle: "Seafood", recipeImage: "seafood.jpg", recipeFavourited: false, recipeReview: "Seafoods do not actually come from sea"))
+        //recipeList.append(Recipe(recipeTitle: "Seafood", recipeImage: "seafood.jpg", recipeFavourited: false, recipeReview: "Seafoods do not actually come from sea"))
         
-        recipeList.append(Recipe(recipeTitle: "Sushi", recipeImage: "sushi.jpg", recipeFavourited: true, recipeReview: "Are sushi japanese dish?"))
+        //recipeList.append(Recipe(recipeTitle: "Sushi", recipeImage: "sushi.jpg", recipeFavourited: true, recipeReview: "Are sushi japanese dish?"))
     }
 
 }

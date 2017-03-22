@@ -9,3 +9,6 @@
 import Foundation
 
 let SIGN_IN_NOTIFICATION_KEY = "com.heuju.signInNotification"
+
+
+let CONNECTION_URL = "http://localhost/RecipeApp/display.php"

@@ -36,7 +36,14 @@ class RecipeDetailsViewController: UIViewController {
     
     
     func onEditRecipe() {
-        Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Edit", alertMessage: "Do you want to edit te recipe?")
+        //Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Edit", alertMessage: "Do you want to edit te recipe?")
+        if let editRecipeVC = self.storyboard?.instantiateViewController(withIdentifier: "EditRecipeViewController") as? EditRecipeViewController {
+        
+            self.navigationController?.pushViewController(editRecipeVC, animated: true)
+            
+            editRecipeVC.recipe = recipe
+            
+        }
     }
     
     

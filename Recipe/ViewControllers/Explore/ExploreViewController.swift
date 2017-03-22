@@ -10,37 +10,87 @@ import UIKit
 
 class ExploreViewController: UIViewController {
     
-    @IBOutlet weak var recipeList: UICollectionView!
+    @IBOutlet weak var recipeListCollectionView: UICollectionView!
     @IBOutlet weak var signInBtn: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.recipeList.register(UINib(nibName: "RecipeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "recipeItem")
+        self.recipeListCollectionView.register(UINib(nibName: "RecipeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "recipeItem")
         
         signInClicked(UIBarButtonItem())
         
-        recipeList.delegate = self
-        recipeList.dataSource = self
-        
+        recipeListCollectionView.delegate = self
+        recipeListCollectionView.dataSource = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(onSignIn), name: Notification.Name(SIGN_IN_NOTIFICATION_KEY), object: nil)
+        
+        
+        startConnection()
+        
         
     }
     
     
     func onSignIn() {
-    
+        
         print("Login Successful")
         //Alerter.shared.createDefaultAlert(controller: self, alertTitle: "Success", alertMessage: "Sign in successful")
-        
         
         //Hide signin button
         signInBtn.isEnabled = false
         signInBtn.tintColor = UIColor.clear
-
+        
     }
 }
+
+//MARK: Webservice
+extension ExploreViewController {
+    
+    func startConnection() {
+        
+        let urlPath = URL(string: CONNECTION_URL)
+        
+        let task = URLSession.shared.dataTask(with: urlPath!) { data, response, error in
+            
+            let json = try! JSONSerialization.jsonObject(with: data!, options: [])
+            print(json)
+            
+            self.populateRecipeList(json: json)
+        }
+        task.resume()
+    }
+    
+    func populateRecipeList(json: Any) {
+        
+        
+        let recipes = (json as! [[String: Any]])
+        
+        print(recipes.count)
+        
+        for recipe in recipes {
+            
+            //print(recipe["title"])
+            
+            
+            let recipeTitle = recipe["title"] as! String
+            let recipeImage = recipe["image"] as! String
+            let recipeFavourited = recipe["favorited"] as! Bool
+            let recipeReview = recipe["review"] as! String
+            
+            let recipe = Recipe(recipeTitle: recipeTitle, recipeImage: recipeImage, recipeFavourited: recipeFavourited, recipeReview: recipeReview)
+            
+            RecipeData.shared.recipeList.append(recipe)
+            
+        }
+        
+        recipeListCollectionView.reloadData()
+        
+        
+    }
+}
+
 
 
 //MARK: Events
@@ -52,6 +102,7 @@ extension ExploreViewController {
             
             let navVC = UINavigationController(rootViewController: signInVC)
             self.present(navVC, animated: true, completion: nil)
+            
         }
     }
 }

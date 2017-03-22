@@ -25,6 +25,7 @@
 		DABBBE801E6924B300D2A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE7E1E6924B300D2A78B /* LaunchScreen.storyboard */; };
 		DABBBE881E69285800D2A78B /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE871E69285800D2A78B /* assets.xcassets */; };
 		DAC6C5751E77AD0000BDC7CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6C5741E77AD0000BDC7CD /* Constants.swift */; };
+		DAC6C5781E77C55E00BDC7CD /* EditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6C5771E77C55E00BDC7CD /* EditRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DABBBE811E6924B300D2A78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DABBBE871E69285800D2A78B /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		DAC6C5741E77AD0000BDC7CD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DAC6C5771E77C55E00BDC7CD /* EditRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		DA6FC4161E6EA85900F8FF74 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DAC6C5761E77C54B00BDC7CD /* EditRecipe */,
 				DA6FC4171E6EA85900F8FF74 /* AboutUs */,
 				DA6FC4191E6EA85900F8FF74 /* Explore */,
 				DA6FC41B1E6EA85900F8FF74 /* RecipeDetails */,
@@ -181,6 +184,14 @@
 				DABBBE811E6924B300D2A78B /* Info.plist */,
 			);
 			path = Recipe;
+			sourceTree = "<group>";
+		};
+		DAC6C5761E77C54B00BDC7CD /* EditRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				DAC6C5771E77C55E00BDC7CD /* EditRecipeViewController.swift */,
+			);
+			path = EditRecipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				DAC6C5751E77AD0000BDC7CD /* Constants.swift in Sources */,
 				DA5E05D51E726B1700A2F7B7 /* User.swift in Sources */,
 				DA6FC4251E6EA85900F8FF74 /* ExploreViewController.swift in Sources */,
+				DAC6C5781E77C55E00BDC7CD /* EditRecipeViewController.swift in Sources */,
 				DA6FC4261E6EA85900F8FF74 /* RecipeDetailsViewController.swift in Sources */,
 				DA6FC4221E6EA85900F8FF74 /* Recipe.swift in Sources */,
 			);
