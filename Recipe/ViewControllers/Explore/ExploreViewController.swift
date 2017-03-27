@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Alamofire
+
 class ExploreViewController: UIViewController {
     
     @IBOutlet weak var recipeListCollectionView: UICollectionView!
@@ -27,7 +29,8 @@ class ExploreViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(onSignIn), name: Notification.Name(SIGN_IN_NOTIFICATION_KEY), object: nil)
         
         
-        startConnection()
+        //startConnection()
+        startConnectionAlamofire()
         
         
     }
@@ -62,8 +65,28 @@ extension ExploreViewController {
         task.resume()
     }
     
-    func populateRecipeList(json: Any) {
+    
+    func startConnectionAlamofire() {
         
+        let urlPath = URL(string: CONNECTION_URL)
+        
+        Alamofire.request(urlPath!).responseJSON {
+            response in
+            
+            //            print(response.response)
+            //            print(response.request)
+            //            print(response.data)
+            //            print(response.result)
+            //
+            //            print(response.result.value)
+            
+            self.populateRecipeList(json: response.result.value!)
+        }
+        
+    }
+    
+    
+    func populateRecipeList(json: Any) {
         
         let recipes = (json as! [[String: Any]])
         
@@ -86,8 +109,6 @@ extension ExploreViewController {
         }
         
         recipeListCollectionView.reloadData()
-        
-        
     }
 }
 
