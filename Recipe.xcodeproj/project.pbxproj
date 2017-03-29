@@ -20,6 +20,10 @@
 		DA6FC4281E6EA85900F8FF74 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FC4201E6EA85900F8FF74 /* SignInViewController.swift */; };
 		DA70B4611E6EBA6D002BD2D6 /* Alerter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70B4601E6EBA6D002BD2D6 /* Alerter.swift */; };
 		DA7A33A21E710B66007C934D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7A33A11E710B66007C934D /* Validator.swift */; };
+		DA82ABCC1E8A1B3C0097BE4E /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82ABCB1E8A1B3C0097BE4E /* WishListViewController.swift */; };
+		DA82ABCE1E8A26F00097BE4E /* WishListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82ABCD1E8A26F00097BE4E /* WishListData.swift */; };
+		DA82ABD11E8A28DF0097BE4E /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82ABCF1E8A28DF0097BE4E /* WishListTableViewCell.swift */; };
+		DA82ABD21E8A28DF0097BE4E /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA82ABD01E8A28DF0097BE4E /* WishListTableViewCell.xib */; };
 		DAA3C6C81E724D97009D2976 /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA3C6C71E724D97009D2976 /* RecipeCollectionViewCell.xib */; };
 		DABBBE761E6924B200D2A78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBBE751E6924B200D2A78B /* AppDelegate.swift */; };
 		DABBBE7B1E6924B300D2A78B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABBBE791E6924B300D2A78B /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		DA6FC4201E6EA85900F8FF74 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DA70B4601E6EBA6D002BD2D6 /* Alerter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerter.swift; sourceTree = "<group>"; };
 		DA7A33A11E710B66007C934D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		DA82ABCB1E8A1B3C0097BE4E /* WishListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		DA82ABCD1E8A26F00097BE4E /* WishListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListData.swift; sourceTree = "<group>"; };
+		DA82ABCF1E8A28DF0097BE4E /* WishListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
+		DA82ABD01E8A28DF0097BE4E /* WishListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
 		DAA3C6C71E724D97009D2976 /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		DABBBE721E6924B200D2A78B /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABBBE751E6924B200D2A78B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +106,8 @@
 			children = (
 				DA6FC4111E6EA85900F8FF74 /* RecipeCollectionViewCell.swift */,
 				DAA3C6C71E724D97009D2976 /* RecipeCollectionViewCell.xib */,
+				DA82ABCF1E8A28DF0097BE4E /* WishListTableViewCell.swift */,
+				DA82ABD01E8A28DF0097BE4E /* WishListTableViewCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 				DA7A33A11E710B66007C934D /* Validator.swift */,
 				DA6FC4151E6EA85900F8FF74 /* RecipeData.swift */,
 				DA5E05D61E726B7C00A2F7B7 /* UserData.swift */,
+				DA82ABCD1E8A26F00097BE4E /* WishListData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 				DA6FC41B1E6EA85900F8FF74 /* RecipeDetails */,
 				DA6FC41D1E6EA85900F8FF74 /* Register */,
 				DA6FC41F1E6EA85900F8FF74 /* SignIn */,
+				DA82ABCA1E8A1B180097BE4E /* WishList */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +185,14 @@
 				DA6FC4201E6EA85900F8FF74 /* SignInViewController.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DA82ABCA1E8A1B180097BE4E /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				DA82ABCB1E8A1B3C0097BE4E /* WishListViewController.swift */,
+			);
+			path = WishList;
 			sourceTree = "<group>";
 		};
 		DABBBE691E6924B200D2A78B = {
@@ -282,6 +302,7 @@
 			files = (
 				DAA3C6C81E724D97009D2976 /* RecipeCollectionViewCell.xib in Resources */,
 				DABBBE801E6924B300D2A78B /* LaunchScreen.storyboard in Resources */,
+				DA82ABD21E8A28DF0097BE4E /* WishListTableViewCell.xib in Resources */,
 				DABBBE7B1E6924B300D2A78B /* Main.storyboard in Resources */,
 				DABBBE881E69285800D2A78B /* assets.xcassets in Resources */,
 			);
@@ -346,6 +367,7 @@
 				DA6FC4241E6EA85900F8FF74 /* AboutUsViewController.swift in Sources */,
 				DA70B4611E6EBA6D002BD2D6 /* Alerter.swift in Sources */,
 				DA6FC4211E6EA85900F8FF74 /* RecipeCollectionViewCell.swift in Sources */,
+				DA82ABCE1E8A26F00097BE4E /* WishListData.swift in Sources */,
 				DABBBE761E6924B200D2A78B /* AppDelegate.swift in Sources */,
 				DA6FC4281E6EA85900F8FF74 /* SignInViewController.swift in Sources */,
 				DA7A33A21E710B66007C934D /* Validator.swift in Sources */,
@@ -355,6 +377,8 @@
 				DA5E05D51E726B1700A2F7B7 /* User.swift in Sources */,
 				DA6FC4251E6EA85900F8FF74 /* ExploreViewController.swift in Sources */,
 				DAC6C5781E77C55E00BDC7CD /* EditRecipeViewController.swift in Sources */,
+				DA82ABD11E8A28DF0097BE4E /* WishListTableViewCell.swift in Sources */,
+				DA82ABCC1E8A1B3C0097BE4E /* WishListViewController.swift in Sources */,
 				DA6FC4261E6EA85900F8FF74 /* RecipeDetailsViewController.swift in Sources */,
 				DA6FC4221E6EA85900F8FF74 /* Recipe.swift in Sources */,
 			);

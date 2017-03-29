@@ -96,13 +96,13 @@ extension ExploreViewController {
             
             //print(recipe["title"])
             
-            
+            let recipeId = recipe["id"] as! Int
             let recipeTitle = recipe["title"] as! String
             let recipeImage = recipe["image"] as! String
             let recipeFavourited = recipe["favorited"] as! Bool
             let recipeReview = recipe["review"] as! String
             
-            let recipe = Recipe(recipeTitle: recipeTitle, recipeImage: recipeImage, recipeFavourited: recipeFavourited, recipeReview: recipeReview)
+            let recipe = Recipe(recipeId: recipeId, recipeTitle: recipeTitle, recipeImage: recipeImage, recipeFavourited: recipeFavourited, recipeReview: recipeReview)
             
             RecipeData.shared.recipeList.append(recipe)
             

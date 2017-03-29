@@ -10,12 +10,14 @@ import Foundation
 
 class Recipe {
     
+    let recipeId: Int?
     let recipeTitle: String?
     let recipeImage: String?
     let recipeFavourited: Bool?
     let recipeReview: String?
 
-    init(recipeTitle:String, recipeImage:String, recipeFavourited:Bool, recipeReview:String) {
+    init(recipeId: Int, recipeTitle:String, recipeImage:String, recipeFavourited:Bool, recipeReview:String) {
+        self.recipeId = recipeId
         self.recipeTitle = recipeTitle
         self.recipeImage = recipeImage
         self.recipeFavourited = recipeFavourited

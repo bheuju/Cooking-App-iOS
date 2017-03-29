@@ -21,9 +21,9 @@ class RecipeData {
     
     
     func initRecipeList() {
-        recipeList.append(Recipe(recipeTitle: "Burgers", recipeImage: "burgers.jpg", recipeFavourited: true, recipeReview: "This is a review for burgers"))
+        recipeList.append(Recipe(recipeId: 1, recipeTitle: "Burgers", recipeImage: "burgers.jpg", recipeFavourited: true, recipeReview: "This is a review for burgers. A"))
         
-        recipeList.append(Recipe(recipeTitle: "Pizza", recipeImage: "pizza.jpg", recipeFavourited: false, recipeReview: "Pizzas are round"))
+        recipeList.append(Recipe(recipeId: 2, recipeTitle: "Pizza", recipeImage: "pizza.jpg", recipeFavourited: false, recipeReview: "Pizza is a yeasted ")) //flatbread generally topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.
         
         //recipeList.append(Recipe(recipeTitle: "Seafood", recipeImage: "seafood.jpg", recipeFavourited: false, recipeReview: "Seafoods do not actually come from sea"))
         
