@@ -26,6 +26,7 @@ class ExploreViewController: UIViewController {
         recipeListCollectionView.delegate = self
         recipeListCollectionView.dataSource = self
         
+        
         NotificationCenter.default.addObserver(self, selector: #selector(onSignIn), name: Notification.Name(SIGN_IN_NOTIFICATION_KEY), object: nil)
         
         
@@ -33,6 +34,13 @@ class ExploreViewController: UIViewController {
         startConnectionAlamofire()
         
         
+        if let layout = recipeListCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            
+            let itemDim = self.view.frame.size.width / 3.0
+            
+            layout.itemSize = CGSize(width: itemDim, height: itemDim)
+        }
     }
     
     
@@ -130,8 +138,10 @@ extension ExploreViewController {
 
 
 //MARK: RecipeList CollectionView
-extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    
+    //MARK: CollectionView
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -164,6 +174,21 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             
         }
     }
+    
+    //MARK: ColectionView Flowlayout
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //
+    //        let itemDim = self.view.frame.size.width / 3.0
+    //        return CGSize(width: itemDim, height: itemDim)
+    //    }
+    //
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    //
+    //        return UIEdgeInsetsMake(0, 10, 10, 0)
+    //    }
+    
+    
+    
     
 }
 
